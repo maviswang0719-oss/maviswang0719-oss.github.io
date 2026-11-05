@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mavis Wang</title>
+<meta name="description" content="Mavis Wang, independent researcher studying LLM agents on combinatorial scheduling problems, with a focus on the multi-mode resource-constrained project scheduling problem (MRCPSP).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Layout: one 720px reading column; the header pairs a portrait with the introduction. */
+  --bg: #f6f7f9;
+  --ink: #161a21;
+  --muted: #5a6272;
+  --rule: #dce0e7;
+  --accent: #2f53c4;
+  --tint: #dfe5f7;
+  --display: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1218;
+    --ink: #e6e9ef;
+    --muted: #9aa3b3;
+    --rule: #262c37;
+    --accent: #8ba2ff;
+    --tint: #1f2842;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1218;
+  --ink: #e6e9ef;
+  --muted: #9aa3b3;
+  --rule: #262c37;
+  --accent: #8ba2ff;
+  --tint: #1f2842;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 20px 48px;
+  display: grid;
+  gap: 56px;
+}
+a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 500; text-wrap: balance; margin: 0; }
+h1 { font-size: 44px; line-height: 1.1; letter-spacing: -0.01em; }
+h2 {
+  font-size: 22px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+h3 { font-family: var(--body); font-size: 17px; font-weight: 600; }
+p { margin: 0; }
+.stack { display: grid; gap: 16px; }
+.intro {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 36px;
+  align-items: start;
+}
+.portrait {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+.portrait img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--tint);
+}
+.role { font-family: var(--mono); font-size: 14px; color: var(--muted); margin-top: 10px; }
+.lede { font-size: 18px; }
+.contact-line { font-size: 15px; }
+.entry { display: grid; gap: 6px; }
+.entry-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 16px; align-items: baseline; }
+.when { font-family: var(--mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.where { color: var(--muted); font-size: 15px; }
+ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+li::marker { color: var(--muted); }
+footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 16px; }
+@media (max-width: 600px) {
+  main { padding-top: 40px; gap: 44px; }
+  .intro { grid-template-columns: 1fr; gap: 24px; }
+  .portrait { max-width: 240px; }
+  h1 { font-size: 36px; }
+  body { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+<main>
+
+  <header class="intro">
+    <figure class="portrait">
+      <img src="photo.jpg" width="600" height="800" alt="Mavis Wang smiling beside a window with a large Totoro plush.">
+    </figure>
+    <div class="stack">
+      <div>
+        <h1>Mavis Wang</h1>
+        <p class="role">Independent researcher in LLM agents for combinatorial scheduling</p>
+      </div>
+      <p class="lede">I study how LLM-based agents perform on hard scheduling problems, with a focus on the
+        multi-mode resource-constrained project scheduling problem (MRCPSP). I build executable tasks in which an
+        agent has to design, implement and tune a complete solver within a fixed time budget, and is then judged on
+        instances it has never seen.</p>
+      <p>Before this I spent two and a half years as a software engineer at TikTok, where I built the benchmark
+        and evaluation harness that ByteDance Seed used to adapt foundation models to root-cause analysis of real
+        production incidents.</p>
+      <p class="contact-line"><a href="mailto:maviswang0719@gmail.com">maviswang0719@gmail.com</a></p>
+    </div>
+  </header>
+
+  <section class="stack" aria-labelledby="h-research">
+    <h2 id="h-research">Research</h2>
+    <div class="entry">
+      <h3>LLM agents on the multi-mode RCPSP</h3>
+      <p>In the MRCPSP every activity can run in one of several modes, each trading duration against renewable and
+        non-renewable resources, under precedence constraints, and the goal is the shortest makespan. I study where
+        agents succeed and fail when they have to build a full solver for it: picking modes, keeping resource usage
+        feasible, and running an anytime search that keeps improving until the time limit.</p>
+    </div>
+    <div class="entry">
+      <h3>An executable benchmark task on integrated healthcare timetabling</h3>
+      <p>A task built on the problem of the Integrated Healthcare Timetabling Competition 2024 (IHTC-2024), in
+        preparation for the RSI-Exam benchmark. An agent gets one hour to write a solver that decides patient
+        admissions, operating theaters and nurse assignments together. It is graded on freshly generated hidden
+        instances, against a competition finalist's solver as the reference and a proven lower bound as the
+        ceiling, with a pass threshold set from the reference's run-to-run noise.</p>
+    </div>
+    <div class="entry">
+      <h3>Interests</h3>
+      <ul>
+        <li>Agents that design and tune solvers for combinatorial optimization and scheduling</li>
+        <li>Benchmark design: hidden test splits, reference solvers, lower bounds and calibrated anchors</li>
+        <li>Measurement you can steer training with: noise floors, paired comparisons and statistical thresholds</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="stack" aria-labelledby="h-experience">
+    <h2 id="h-experience">Experience</h2>
+    <div class="entry">
+      <div class="entry-head"><h3>Independent researcher</h3><span class="when">Nov 2026 – present</span></div>
+      <p>LLM agents on combinatorial scheduling problems; see Research above.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><h3>TikTok, Software Development Engineer</h3><span class="when">Jun 2024 – Oct 2026</span></div>
+      <p class="where">Ads Data Platform, San Jose, CA</p>
+      <ul>
+        <li>Owned the root-cause-analysis (RCA) evaluation suite through which ByteDance Seed adapted three internal
+          foundation models to incident root-cause analysis: task specs written from on-call expertise, a 0–3 depth
+          rubric, and a benchmark a model team without RCA background could optimize against.</li>
+        <li>Built a time-split benchmark from real postmortems labeled across hundreds of teams: about 320 recent
+          incidents as a private held-out test set, six months of older postmortems as a shared training split.</li>
+        <li>Made the scores reliable enough to steer training: every checkpoint runs in isolated Docker sandboxes, a
+          human-verified LLM judge scores trajectories, and each comparison runs three paired trials against an
+          A/A-measured noise floor.</li>
+        <li>Failure analysis traced hallucinated and causally reversed root causes to how tool outputs were summarized,
+          which moved Seed's SFT and our agent design toward hypothesis-driven reasoning and raised the held-out
+          root-cause hit rate from 60% to 86%.</li>
+        <li>Re-architected the real-time conversion attribution store into tiered hot and cold state (600K peak
+          writes/s per region over about 1.5 PB), cutting peak storage by 30% and in-window join failures from
+          8.6% to 0.8%.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><h3>Boston University, Software Engineer Intern</h3><span class="when">Feb 2024 – Jun 2024</span></div>
+      <ul>
+        <li>Built a containerized ETL and streaming pipeline (Docker, Airflow, Kafka, Spark) for regional open traffic
+          data and cut end-to-end latency by 42%.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="stack" aria-labelledby="h-education">
+    <h2 id="h-education">Education</h2>
+    <div class="entry">
+      <div class="entry-head"><h3>M.S. in Computer Science</h3><span class="when">2022 – 2024</span></div>
+      <p class="where">Boston University</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><h3>B.A. in Computer &amp; Information Science, B.S. in Statistics</h3><span class="when">2018 – 2022</span></div>
+      <p class="where">The Ohio State University</p>
+    </div>
+  </section>
+
+  <section class="stack" aria-labelledby="h-contact">
+    <h2 id="h-contact">Contact</h2>
+    <p>Email: <a href="mailto:maviswang0719@gmail.com">maviswang0719@gmail.com</a></p>
+  </section>
+
+  <footer>Last updated November 2026.</footer>
+</main>
+</body>
+</html>
